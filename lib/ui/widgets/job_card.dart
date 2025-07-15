@@ -96,7 +96,15 @@ class JobCard extends StatelessWidget {
                       ),
                     ),
                       const SizedBox(width: 10),
-                      Text('$applicantsCount Applied · More Detail', style: AppTextStyles.primary12),
+
+                      Flexible(
+                        child: Text(
+                          '$applicantsCount Applied · More Detail',
+                          style: AppTextStyles.primary12,
+                          overflow: TextOverflow.clip,
+                          maxLines: 1,
+                        ),
+                      ),
                     ],
                   ),
                 ],
